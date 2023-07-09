@@ -62,6 +62,11 @@ func (model *Model) LearnSample(input, output []float64) error {
 	return nil
 }
 
+// Get output from the network
+func (model *Model) CalculateOutput(input []float64) []float64 {
+	return model.network.CalculateOutput(input)
+}
+
 // LastOutput function returns the last output of the network.
 func (model *Model) LastOutput() []float64 {
 	return model.network.LastOutput()
